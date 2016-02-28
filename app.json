@@ -2,5 +2,5 @@
   "name": "Crem,nm,nditHour",
   "description": "This Is A CreditmnbHour Application On Heroku.",
   "repository": "https://github.com/ashraf-revo/nbbnm",
-  "image": "heroku/java",
+  "image": "heroku/java"
 }
