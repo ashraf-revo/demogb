@@ -190,15 +190,19 @@
                     rtcPeerConnection.onremovestream = handleRemoteStreamRemoved;
                 }
 
-                function doCall() {
-                    console.log('Sending offer to peer');
-                    rtcPeerConnection.createOffer(setLocalAndSendMessage, null);
-                }
+            function doCall() {
+                console.log('Sending offer to peer');
+                rtcPeerConnection.createOffer(setLocalAndSendMessage, function (error) {
+                    console.log(error)
+                });
+            }
 
-                function doAnswer() {
-                    console.log('Sending answer to peer.');
-                    rtcPeerConnection.createAnswer(setLocalAndSendMessage, null);
-                }
+            function doAnswer() {
+                console.log('Sending answer to peer.');
+                rtcPeerConnection.createAnswer(setLocalAndSendMessage, function (error) {
+                    console.log(error)
+                });
+            }
 
                 function tryHangup() {
                     if(isStarted) {
